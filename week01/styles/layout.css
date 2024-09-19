@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+header,
+footer {
+    color: white;
+    background-color: darkslategrey;
+}
+
+header p {
+    padding: 0.75em;
+}
+
+nav {
+
+    background-color: black;
+    color: white;
+    margin-top: 2rem;
+
+    box-sizing: border-box;
+    transition: all .35s ease;
+
+}
+
+nav ul {
+
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    text-align: center;
+    padding: 0;
+
+}
+
+li {
+    flex: 1 1 auto;
+    margin: 0.75rem;
+}
+
+/* nav a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+} */
+
+/* nav a:hover {
+
+    color: aqua;
+} */
+
+nav a {
+    padding: .3em .7em;
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+
+
+
+nav a::before,
+nav a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .25s ease;
+    opacity: 0;
+}
+
+nav a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid aqua;
+    border-right: 3px solid aqua;
+    transform: translate(-100%, 50%);
+}
+
+nav a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid aqua;
+    border-left: 3px solid aqua;
+    transform: translate(100%, -50%)
+}
+
+nav a:hover:before,
+nav a:hover:after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+
+main {
+    background-color: rgb(161, 159, 159);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: row;
+}
+
+.main,
+.aside {
+    padding: 1rem;
+    min-height: 8rem;
+}
+
+.aside {
+    background-color: white;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    min-height: 4rem;
+}
+
+
+
+@media (max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    /* .main, .aside  {
+        grid-column: 1 / -1;
+    } */
+}
