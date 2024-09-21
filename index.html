@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/base.css">
     <title>Fernando Gonzalez | WDD 131</title>
     <meta name="description"
         content="Portfolio of Fernando Gonzalez, student of BYU-I University. WDD 131 - Dynamic Web Fundamentals. Explore my web development projects and skills in both frontend and backend design.">
     <link rel="stylesheet" href="styles/base.css">
     <meta name="author" content="Fernando Gonzalez">
-
+    <script src="scripts/getdates.js"></script>
 </head>
 
 <body>
@@ -22,7 +22,8 @@
             <ul>
                 <li><a href="https://www.linkedin.com/in/fergonzalez-valdez" target="_blank">LinkedIn</a></li>
                 <li><a href="https://byui.instructure.com/" target="_blank">I-Learn</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/acts/4?lang=eng&id=p12#p12" target="_blank">Scripture</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/acts/4?lang=eng&id=p12#p12"
+                        target="_blank">Scripture</a></li>
                 <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
@@ -37,18 +38,54 @@
                 freedom, and democracy.
                 I enjoy outdoor activities and adventures.
             </p>
-            <img src="images/me.jpg" alt="a picture of Fernando Gonzalez in white background">
+            <img id="main-picture" src="images/me.jpg" alt="a picture of Fernando Gonzalez in white background">
             <div class="hobbies">
+                <h2>My hobbies</h2>
+                <figure class="hobbie">
+                    <img src="images/me-trekking.jpg" alt="An image of Fernando walking ina trekking route">
+                    <figcaption style="font-size: small;">
+                        I enjoy walking in nature, climbing, and discovering natural landscapes.
+                    </figcaption>
+                </figure>
+                <figure class="hobbie">
+                    <img src="images/me-kayak.jpg" alt="a man and a woman kayaking on a lake in the sun">
+                    <figcaption style="font-size: small;">Activities that require a lot of physical activity are also my
+                        favorites, such as swimming, climbing or kayaking.
+                    </figcaption>
+                </figure>
+                <figure class="hobbie">
+                    <img src="images/me-in-mountain.jpg"
+                        alt="A photo of Fernando with a snowy mountain in the background">
+                    <figcaption style="font-size: small;">
+                        Taking photos in beautiful natural places is something I usually do.
+                    </figcaption>
+                </figure>
+                <figure class="hobbie">
+                    <img src="images/me-surfing.jpg"
+                        alt="An image of Fernando holding an orange surfboard on the beach shore">
+                    <figcaption style="font-size: small;">
+                        I also like surfing. I enjoy high tide days because I can catch better waves.
+                    </figcaption>
+                </figure>
+
 
             </div>
         </section>
         <section class="aside card">
             <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://devdocs.io/">API Documentation</a></li>
+                <li><a href="https://nextjs.org/learn">Learn Next.js</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a></li>
+                <li><a href="https://github.com/fergonzalez47">My Github</a></li>
+                <li><a href="https://fernandogonzalez.onrender.com/">Portfolio on Render.com</a></li>
+
+            </ul>
         </section>
     </main>
     <footer>
-        <p>©2024 - Fernando A. Gonzalez valdez | Santiago de Chile</p>
-        <p id="lastModified">Last modification: <span id="currentyear"></span></p>
+        <p>©<span id="currentYear"></span> - Fernando A. Gonzalez valdez | Santiago de Chile</p>
+        <p>Last modification: <span id="lastModified"></span></p>
     </footer>
 </body>
 
