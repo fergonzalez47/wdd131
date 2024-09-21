@@ -111,17 +111,22 @@ main {
 .main {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.main p {
+    flex: 1;
 }
 
 .main img {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     max-width: 15%;
-
-
     height: auto;
-
+    min-width: 100px;
+    height: auto;
     display: block;
-    margin: 0 auto;
+    margin-right: 1rem;
 
 }
 
@@ -148,5 +153,9 @@ footer {
 
     .main {
         flex-wrap: wrap;
+    }
+
+    .main img {
+        margin: 1rem 0;
     }
 }
