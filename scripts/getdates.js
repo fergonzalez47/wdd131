@@ -1,15 +1,16 @@
 
+document.addEventListener("DOMContentLoaded", function () {
+    const displayYear = document.getElementById("currentYear");
+    const displayLastModified = document.getElementById("lastModified");
 
-const displayYear = document.getElementById("currentYear");
-const displayLastModified = document.getElementById("lastModified");
+    const date = new Date();
 
-const date = new Date();
+    displayYear.innerText = "";
+    displayYear.innerText = date.getFullYear();
 
-displayYear.innerText = "";
-displayYear.innerText = date.getFullYear();
-
-displayLastModified.innerText = "";
-displayLastModified.innerHTML = formatDate(date);
+    displayLastModified.innerText = "";
+    displayLastModified.innerHTML = formatDate(date);
+});
 
 
 function formatDate(date) {
