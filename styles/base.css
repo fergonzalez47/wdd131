@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Imprima&display=swap');
+
+
 :root {
     --primary-color: #FFF07C;
     --secondary-color: #5D737E;
@@ -8,7 +11,7 @@
 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 * {
     padding: 0;
@@ -31,7 +34,10 @@ figcaption {
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: "Imprima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
