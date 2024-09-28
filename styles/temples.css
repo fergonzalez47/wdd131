@@ -39,16 +39,17 @@ h6 {
 /* other file */
 
 header {
-    
+
     justify-content: space-between;
     padding: 0.75rem;
-   
+
     align-items: center;
-    
+
 }
- nav {
+
+nav {
     box-sizing: border-box;
- }
+}
 
 nav ul {
 
@@ -70,7 +71,7 @@ li {
 
 
 nav a {
-    
+
     width: 97%;
     margin: 0.75rem auto;
     padding: 0.3rem 0.3rem;
@@ -121,7 +122,7 @@ img {
 }
 
 #menu {
-    font-size: 1.5rem;
+    font-size: 1rem;
     border: 0;
     background: none;
     color: white;
@@ -135,6 +136,15 @@ img {
 }
 
 #menu.open::before {
-    content: "🗙";
-}
+    
 
+    content: "x";
+    cursor: pointer;
+    font-family: "Manrope", sans-serif;
+    font-weight: bold;
+    color: rgb(239, 162, 162);
+    font-size: 24px;
+    font-weight: bold;
+    
+
+}
