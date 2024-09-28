@@ -6,7 +6,27 @@ const scriptureReference = document.createElement("li");
 
 const deleteBtn = document.createElement("button");
 
-scriptureReference.textContent = favchap.value;
-deleteBtn.innerText = "❌";
-scriptureReference.append(deleteBtn);
-ulList.append(scriptureReference);
+
+
+btn.addEventListener("click", () => {
+    if (favchap.value.trim() !== '') {
+        
+        scriptureReference.textContent = favchap.value;
+        deleteBtn.innerText = "❌";
+        
+        scriptureReference.append(deleteBtn);
+        ulList.append(scriptureReference);
+        favchap.value = '';
+        
+        
+    } else {
+        favchap.focus();
+    }
+    
+
+})
+
+deleteBtn.addEventListener("click", () => {
+    ulList.removeChild(scriptureReference);
+    favchap.focus();
+})
