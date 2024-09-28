@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header,
+footer {
+    background-color: rgb(85, 0, 128);
+    color: white;
+    text-align: center;
+
+
+}
+
+h1 {
+    font-size: clamp(1.4rem, 2vw, 3rem);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* other file */
+
+header {
+    
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 3px solid black;
+    align-items: center;
+    
+}
+ nav {
+    box-sizing: border-box;
+ }
+
+nav ul {
+    
+    list-style: none;
+    display: none;
+    flex-direction: column;
+
+}
+
+li {
+
+    margin: 0.25rem;
+
+}
+
+.open ul {
+    display: block;
+}
+
+
+nav a {
+    padding: .3em .7em;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s;
+    color: white;
+}
+
+nav a:hover {
+    background-color: antiquewhite;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.temple-card {
+    max-width: 90%;
+    min-width: 150px;
+    height: auto;
+    margin: 0 auto;
+    padding: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+img {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 100%;
+    height: auto;
+
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 0.5rem;
+    margin: 1rem auto;
+
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "🗙";
+}
+
