@@ -41,8 +41,8 @@ h6 {
 header {
     
     justify-content: space-between;
-    padding: 0.5rem;
-    border: 3px solid black;
+    padding: 0.75rem;
+   
     align-items: center;
     
 }
@@ -51,7 +51,7 @@ header {
  }
 
 nav ul {
-    
+
     list-style: none;
     display: none;
     flex-direction: column;
@@ -70,8 +70,10 @@ li {
 
 
 nav a {
-    padding: .3em .7em;
-    width: 100%;
+    
+    width: 97%;
+    margin: 0.75rem auto;
+    padding: 0.3rem 0.3rem;
     display: block;
     text-decoration: none;
     text-align: center;
