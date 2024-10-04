@@ -1,0 +1,73 @@
+@media screen and (min-width: 500px) {
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main .hero {
+        margin: 0.5rem auto;
+        grid-column: 1 /-1;
+
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        display: initial;
+
+    }
+
+    main .hero {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    main section {
+        background-color: rgba(250, 250, 219, 0.616);
+    }
+
+    /* main .data {
+        position: absolute;
+        top: 0;
+    }
+
+    main .weather {
+        position: absolute;
+        top: 0;
+
+    } */
+
+    main section h2 {
+        position: relative;
+        background-color: var(--secondary-color);
+        color: white;
+        height: 90px;
+    }
+
+
+    .weather .svg-image {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: '';
+        /* No se usa content para imágenes SVG */
+        display: inline-block;
+        width: 70%;
+        height: 70%;
+
+        margin-left: 0.5rem;
+        vertical-align: middle;
+        background-image: url('../images/weather-icon.svg');
+        /* SVG como fondo */
+        background-size: contain;
+        /* Asegura que el ícono mantenga su proporción */
+        background-repeat: no-repeat;
+        /* Evita que el fondo se repita */
+    }
+}

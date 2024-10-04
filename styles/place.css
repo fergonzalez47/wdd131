@@ -1,0 +1,72 @@
+:root {
+    --primary-color: #28047e;
+    --white-color: #ffffff;
+    --secondary-color: #d10c0c;
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+header,
+footer {
+    background-color: var(--primary-color);
+    justify-items: center;
+    color: var(--white-color);
+    padding: 0.75rem;
+
+}
+
+
+h1 {
+
+    text-align: center;
+    font-family: "Playwrite CL", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h2,
+h3,
+h4 {
+    font-weight: 700;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 500px;
+}
+
+main {
+    display: grid;
+}
+
+main section {
+    margin: 1rem auto;
+    background-color: #a80000;
+    
+
+}
+
+/* main .hero {
+    padding: initial;
+    margin: initial;
+
+
+} */
+
+span {
+    color: var(--secondary-color);
+}

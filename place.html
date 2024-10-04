@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fernando Gonzalez">
+    <meta name="description"
+        content="General information of interest about Chile. Data on population, climate, activities, among other information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+CL:wght@100..400&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Chile</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" type="text/javascript" defer></script>
+    <script src="scripts/getdates.js" type="text/javascript" defer></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Chile</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-chile-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-chile-medium.webp">
+                <img src="images/hero-chile-small.webp" alt="">
+            </picture>
+        </section>
+        <section class="data">
+            <h2>Data</h2>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="svg-image">
+                <img src="images/weather-icon.svg" alt="Weather icon">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="currentYear"></span> - Fernando A. Gonzalez valdez | Santiago de Chile</p>
+        <p>Last modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
