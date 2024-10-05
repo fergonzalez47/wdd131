@@ -15,10 +15,12 @@
 
     main {
         display: initial;
+        position: relative;
 
     }
 
     main .hero {
+        margin-top: 0;
         width: 100%;
         height: auto;
     }
@@ -29,27 +31,40 @@
     }
 
     main section {
-        background-color: rgba(250, 250, 219, 0.616);
+        background-color: rgba(250, 250, 250, 0.7);
+        
     }
 
-    /* main .data {
-        position: absolute;
-        top: 0;
-    }
-
-    main .weather {
-        position: absolute;
-        top: 0;
-
-    } */
 
     main section h2 {
+        text-align: left;
+        padding: 0.5rem;
+        align-content: center;
         position: relative;
         background-color: var(--secondary-color);
         color: white;
-        height: 90px;
+        height: 3rem;
+        left: -0.75rem;
+        top: 0.5rem;
+        margin-bottom: 1rem;
+        
     }
 
+    main .data,
+    main .weather {
+        position: absolute;
+        width: 25%;
+    }
+
+    main .data {
+        top: 1rem;
+        left: 1.5rem;
+    }
+
+    main .weather {
+        bottom: 1rem;
+        right: 1.5rem;
+    }
 
     .weather .svg-image {
         display: none;
@@ -57,18 +72,17 @@
 
     .weather h2::after {
         content: '';
-        /* No se usa content para imágenes SVG */
         display: inline-block;
-        width: 70%;
-        height: 70%;
-
+        width: 40px;
+        height: 40px;
         margin-left: 0.5rem;
         vertical-align: middle;
         background-image: url('../images/weather-icon.svg');
-        /* SVG como fondo */
         background-size: contain;
-        /* Asegura que el ícono mantenga su proporción */
         background-repeat: no-repeat;
-        /* Evita que el fondo se repita */
+    }
+
+    main .weather span {
+        color: initial;
     }
 }
