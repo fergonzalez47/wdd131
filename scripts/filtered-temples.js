@@ -8,7 +8,6 @@ hamburgerMenu.addEventListener("click", () => {
 })
 
 
-
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -102,14 +101,54 @@ function templeCard(temple) {
                     <h2>${temple.templeName}</h2>
                     <p><strong>Location:</strong> ${temple.location}</p>
                     <p><strong>Dedication:</strong> ${temple.dedicated}</p>
-                    <p><strong>Area:</strong> ${temple.area}</p>
+                    <p><strong>Size:</strong> ${temple.area} sq fr</p>
                 </figcaption>
             </figure>
-    `
-    
+            `
+
 }
 
+function displayTemples(filteredTemples) {
+    const templesToDisplay = filteredTemples.map(templeCard);
+    container.innerHTML = templesToDisplay.join("");
+}
 
-const templesToDisplay = temples.map(templeCard);
+function filterTemples(param) {
+    let filteredTemples = [];
 
-container.innerHTML = templesToDisplay.join()
+    switch (param) {
+        case "old":
+            filteredTemples = temples.filter((temple => new Date(temple.dedicated).getFullYear() < 1900));
+            break;
+        case "new":
+            filteredTemples = temples.filter((temple => new Date(temple.dedicated).getFullYear() >= 2000));
+            break;
+        case "large":
+            filteredTemples = temples.filter((temple => temple.area > 90000));
+            break;
+        case "small":
+            filteredTemples = temples.filter((temple => temple.area < 10000));            break;
+        default:
+            filteredTemples = temples;
+    }
+    displayTemples(filteredTemples);
+}
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const criteria = event.target.getAttribute('href').replace('#', ''); 
+        filterTemples(criteria);
+    })
+})
+
+
+filterTemples(temples);
+
+
+
+
+
+
+
+
