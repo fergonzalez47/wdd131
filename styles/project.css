@@ -1,0 +1,67 @@
+:root {
+    /* FIRST PALLET */
+    --font-body: "Nunito", sans-serif;
+    --font-heading: "Bebas Neue", serif;
+    --a-primary-color: #e7b324;
+    /* --a-primary-color: #e05215; */
+    --a-secondary-color: #2d3142;
+    --a-white-color: #ffffff;
+    --a-background-color: #bfc0c0;
+    --a-auxiliar-color: #4f5d75;
+
+    /* secondary pallet  */
+    --b-primary-color: #F6C279;
+    --b-secondary-color: #161B33;
+    --b-white-color: #DBDBDB;
+    --b-background-color: #0D0C1D;
+    --b-auxiliar-color: #2ca73c;
+    /* --b-auxiliar-color: #52B77C; */
+}
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1rem, 2.3vw, 1.5rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+.cta-btn {
+
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+header {
+    background-color: var(--a-primary-color);
+    color: var(--a-auxiliar-color);
+    text-align: center;
+
+}
+
+section {
+    margin: 2rem auto;
+
+}
+
+span {
+    width: 45px;
+}
