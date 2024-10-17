@@ -65,3 +65,12 @@ section {
 span {
     width: 45px;
 }
+
+div {
+    max-width: 80%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
