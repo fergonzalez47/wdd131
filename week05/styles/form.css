@@ -1,5 +1,15 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+
 * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+
     margin: 0;
     padding: 0;
 }
@@ -9,6 +19,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 16px;
 }
 
 h1,
@@ -17,110 +28,80 @@ h3,
 h4,
 h5,
 h6,
-fieldset {
+legend,
+fieldset div {
     font-family: "Denk One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
 
-/*----------- apply a natural box layout model to all elements --------------*/
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-
-/*----------- BODY --------------*/
-body {
-    font-size: 16px;
-    font-family: Verdana, sans-serif;
-}
 
 
 /*----------- HEADER --------------*/
-header {
+header,
+footer {
+    text-align: center;
     padding: .5rem 2%;
-    background-color: #ddd;
+    background-color: #367874;
+    color: white;
 }
 
 header h1 {
-    margin: 0;
+    margin: .5rem auto;
 }
 
-header h2 {
-    margin: 0;
-    font-weight: normal;
-}
-
-/*----------- NAVIGATION --------------*/
-nav {
-    background-color: #666;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    border-bottom: solid 1px #333;
-}
-
-nav ul li a {
-    display: block;
-    background-color: #444;
-    color: #eee;
-    padding: .5rem 0;
-    text-decoration: none;
-    font-size: .9rem;
-    text-align: center;
-}
-
-nav ul li.active a {
-    background-color: #000;
-    color: #fff;
-}
 
 /*----------- MAIN --------------*/
 main {
     padding: 0 2%;
-    min-height: 20rem;
+
 }
 
 /*----------- FORMS --------------*/
 
 
+.required-element {
+    color: rgb(128, 29, 29);
+}
+
+.wf1 {
+    max-width: 500px;
+    margin: 0.5rem auto;
+    background-color: #2c605c36;
+    border: 1px solid rgb(182, 178, 178);
+    border-radius: 6px;
+    box-shadow: 1px 1px 12px 1px #555;
+    padding: .5rem;
+
+}
+
 .wf1 fieldset {
+    margin: 1rem auto;
     margin: 2rem 0;
-    border: 1px solid gray;
+    border: none;
     border-radius: 6px;
     padding: .5rem 2%;
+
 }
 
 .wf1 legend {
-    color: rgb(71, 71, 197);
-    padding: 0 .5rem;
+    color: #2c605c;
 
 }
 
 .wf1 label {
+    padding-left: .75rem;
     display: block;
-    padding-top: 1rem;
-    color: red;
     font-size: .9rem;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 1rem;
 }
 
 .wf1 div {
     padding-top: 1rem;
-    color: rgb(71, 71, 197);
+    padding-bottom: .75rem;
     font-size: .9rem;
 }
 
@@ -132,7 +113,7 @@ main {
 .wf1 input[type="number"],
 .wf1 select {
     background-color: #eee;
-    display: block;
+    align-content: start;
     border: solid 1px gray;
     border-radius: 6px;
     padding: .75rem;
@@ -144,40 +125,59 @@ main {
 
 .wf1 input[type="radio"],
 .wf1 input[type="checkbox"] {
-    margin-right: 6px;
+    margin-right: 8px;
 }
 
+
 .wf1 input[type="submit"] {
+    font-size: 20px;
     border: none;
-    background-image: linear-gradient(rgb(126, 17, 17), purple);
+    background-image: linear-gradient(#39918a, #2c605c);
     color: white;
     padding: .75rem;
     width: 96%;
     max-width: 400px;
     border-radius: 6px;
-    margin: -1rem 2% 2rem 2%;
+    margin: -1rem 4% 2rem 4%;
 }
 
+.wf1 input[type="submit"]:hover {
+    cursor: pointer;
+    border: initial;
+    background-image: linear-gradient(#2c605c, #39918a);
+
+}
+
+.wf1 input:required {
+    border-bottom: solid 3px red;
+}
 
 .wf1 input:required:valid {
     border-bottom: solid 9px green;
 }
 
 
+p {
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 600px;
 
+}
 
-
-
-
-
-
-
-
-
-
-/*----------- FOOTER --------------*/
-footer {
-    background-color: #ddd;
-    padding: .5rem 2%;
+section {
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(160, 105, 38);
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+a:hover {
+    cursor: pointer;
+
+    color: rgb(0, 74, 94);
+    font-weight: 800;
 }

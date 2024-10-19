@@ -4,7 +4,7 @@ const btn = document.querySelector("button");
 
 
 
-chaptersArray = getChapterList() || [];
+let chaptersArray = getChapterList() || [];
 
 chaptersArray.forEach(chapter => {
     displayList(chapter)
